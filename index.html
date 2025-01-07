@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        const textToCopy = new URLSearchParams(window.location.search).get("text");
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            alert("Copied: " + textToCopy);
+            window.close();
+        });
+    </script>
+</body>
+</html>
